@@ -1,9 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
 
-app = Flask(__name__)
-CORS(app)
+flaskapp = Flask(__name__)
+CORS(flaskapp)
 
-@app.route("/")
+@flaskapp.route("/")
 def helloWorld():
   return "Hello, cross-origin-world!"
