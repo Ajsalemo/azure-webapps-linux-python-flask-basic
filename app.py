@@ -6,4 +6,4 @@ CORS(app)
 
 @app.route("/")
 def helloWorld():
-  return "Hello, cross-origin-world!!"
+  return "Hello, cross-origin-world!"
