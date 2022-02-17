@@ -1,6 +1,9 @@
 from flask import Flask
-app = Flask(__name__)
+from flask_cors import CORS
 
-@app.route('/')
-def hello_world():
-    return 'Running from DevOps'
+app = Flask(__name__)
+CORS(app)
+
+@app.route("/")
+def helloWorld():
+  return "Hello, cross-origin-world!"
