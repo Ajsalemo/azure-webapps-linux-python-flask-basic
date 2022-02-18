@@ -62,3 +62,4 @@ jobs:
           app-name: 'ansalemo-flask-failed-deploy-test'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A3E9D6FE56F04F089B58903B01C17438 }}
+          package: release.zip
