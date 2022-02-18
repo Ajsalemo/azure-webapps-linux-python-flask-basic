@@ -6,4 +6,4 @@ CORS(flaskapp)
 
 @flaskapp.route("/")
 def helloWorld():
-  return "Hello, cross-origin-world!!"
+  return "Deployed with a zip"
