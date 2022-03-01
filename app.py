@@ -6,4 +6,4 @@ CORS(app)
 
 @app.route("/")
 def helloWorld():
-  return "Deployed with a zip"
+  return "Deployed with a custom command (2)"
