@@ -1,9 +1,7 @@
 from flask import Flask
-from flask_cors import CORS
 
-flaskapp = Flask(__name__)
-CORS(flaskapp)
+app = Flask(__name__)
 
-@flaskapp.route("/")
+@app.route("/")
 def helloWorld():
-  return "Deployed with a zip"
+  return "Deployed with DevOps"
