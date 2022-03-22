@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def helloWorld():
-  return "Deployed with a Azure DevOps"
+  return "Deployed with Local Git"
