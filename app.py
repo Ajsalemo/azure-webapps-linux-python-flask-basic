@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route("/")
 def helloWorld():
-  return "Deployed with GitHub Actions!"
+  return "Deployed with DevOps build and release!"
