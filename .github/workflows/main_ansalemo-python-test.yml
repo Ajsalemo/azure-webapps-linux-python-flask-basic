@@ -58,6 +58,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'ansalemo-python-test'
+          app-name: 'ansalemo-python-ghactions'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_88A47543DBFE4F3EA719300A01658B63 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BLOGTEST }}
