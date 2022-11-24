@@ -1,4 +1,4 @@
-from flask import Flask
+from Flask import Flask
 from dotenv import load_dotenv
 
 load_dotenv()
