@@ -1,2 +1,2 @@
 Flask
-cffi
+python-dotenv
