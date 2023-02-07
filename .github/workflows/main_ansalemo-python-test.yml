@@ -24,8 +24,8 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          python -m venv antenv
-          source antenv/bin/activate
+          python -m venv something
+          source something/bin/activate
       
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -57,6 +57,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'ansalemo-py-ghactions'
+          app-name: 'ansalemo-gh-actions'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BLOG_TEST }}
