@@ -38,6 +38,7 @@ jobs:
           name: python-app
           path: |
             . 
+            !antenv
 
   deploy:
     runs-on: ubuntu-latest
