@@ -20,12 +20,12 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v1
         with:
-          python-version: '3.10'
+          python-version: '3.9'
 
       - name: Create and start virtual environment
         run: |
-          python -m venv something
-          source something/bin/activate
+          python -m venv .venv
+          source .venv/bin/activate
       
       - name: Install dependencies
         run: pip install --no-cache-dir -r requirements.txt
