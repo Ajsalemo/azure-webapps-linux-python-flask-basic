@@ -24,8 +24,8 @@ jobs:
 
       - name: Create and start virtual environment
         run: |
-          python -m venv antenv
-          source antenv/bin/activate
+          python -m venv something
+          source something/bin/activate
       
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -38,7 +38,6 @@ jobs:
           name: python-app
           path: |
             . 
-            !antenv
 
   deploy:
     runs-on: ubuntu-latest
