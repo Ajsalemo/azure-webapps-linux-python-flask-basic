@@ -122,7 +122,12 @@ dmypy.json
 .pyre/
 
 __pycache__
+<<<<<<< HEAD
 .venv
 /.venv
 venv
 /venv
+=======
+# .venv
+# /.venv
+>>>>>>> 16d4a8dd562c7191e7222b24007dc6578c95f88f
