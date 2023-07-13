@@ -1,0 +1,42 @@
+name: Trigger auto deployment for ansalemo-aca-app
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/ansalemo-aca-app-AutoDeployTrigger-6af9d5ee-0164-475e-a8f3-959051132547.yml'
+
+  # Allow mannually trigger 
+  workflow_dispatch:
+      
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.ANSALEMOACAAPP_AZURE_CREDENTIALS }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v1
+        with:
+          appSourcePath: ${{ github.workspace }} 
+          registryUrl: ansalemoacr.azurecr.io
+          registryUsername: ${{ secrets.ANSALEMOACAAPP_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.ANSALEMOACAAPP_REGISTRY_PASSWORD }}
+          containerAppName: ansalemo-aca-app
+          resourceGroup: ansalemo-rg
+          imageToBuild: ansalemoacr.azurecr.io/ansalemo-aca-app:${{ github.sha }}
+          
+
+     
+
