@@ -37,6 +37,7 @@ jobs:
           resourceGroup: ansalemo-rg
           imageToBuild: ansalemoacr.azurecr.io/ansalemo-gh-actions-acaenv:${{ github.sha }}
           dockerfilePath: Dockerfile
+          targetPort: 8000 --container-name 'ansalemo-gh-actions-acaenv'
 
      
 
