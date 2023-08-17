@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-  return "azure-webaps-linux-python-flask-basic (v1.0)"
+  return "azure-webaps-linux-python-flask-basic (v2)"
 
 
 @app.route("/api/health")
