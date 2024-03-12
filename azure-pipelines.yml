@@ -26,16 +26,14 @@ variables:
   pythonVersion: '3.9'
 
 stages:
-- stage: checkout
+- stage: Build
+  displayName: Build stage
   jobs:
   - job: checkout
     steps:
       - checkout: self
         submodules: true
-        
-- stage: Build
-  displayName: Build stage
-  jobs:
+
   - job: BuildJob
     pool:
       vmImage: $(vmImageName)
