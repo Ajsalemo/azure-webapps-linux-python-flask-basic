@@ -29,15 +29,13 @@ stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: checkout
-    steps:
-      - checkout: self
-        submodules: true
-
   - job: BuildJob
     pool:
       vmImage: $(vmImageName)
     steps:
+    - checkout: self
+      submodules: true
+
     - task: UsePythonVersion@0
       inputs:
         versionSpec: '$(pythonVersion)'
