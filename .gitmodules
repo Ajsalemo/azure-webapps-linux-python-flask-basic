@@ -1,3 +1,3 @@
-[submodule "angular"]
-	path = angular
-	url = https://github.com/Ajsalemo/angular-env-var-with-processenv.git
+[submodule "staticsubmodule"]
+	path = staticsubmodule
+	url = https://ansalemo@dev.azure.com/ansalemo/py-submodules/_git/py-submodules
