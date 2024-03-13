@@ -1,3 +1,4 @@
-[submodule "staticsubmodule"]
-	path = staticsubmodule
-	url = https://ansalemo@dev.azure.com/ansalemo/py-submodules/_git/py-submodules
+
+[submodule "fastapi"]
+	path = fastapi
+	url = https://dev.azure.com/ansalemo/py-submodules/_git/fastapi
